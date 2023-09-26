@@ -35,7 +35,7 @@ class $_$ {
 
     let imports = new Set();
     if (importElements && importElements[0]) {
-      imports = new Set(importElements[0].innerText.trim().replaceAll(/<\!--.*?-->).split(' '));
+      imports = new Set(importElements[0].innerText.trim().replaceAll(/<\!--.*?-->/g, '').split(' '));
       importElements[0].remove();
     }
     
