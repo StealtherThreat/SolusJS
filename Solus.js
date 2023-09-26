@@ -61,7 +61,7 @@ class $_$ {
       if (this.importedFunctions[module] == undefined) {
           this.importedFunctions[module] = {};
       }
-      this.importedFunctions[module][funcName] = (await import('../modules/${module}/${module}.js'))[funcName]
+      this.importedFunctions[module][funcName] = (await import('modules/${module}/${module}.js'))[funcName]
   }
   static async DESTROY(contentFileName, ...parameters) {
       await this.LOAD_FUNC('ondestroy.' + contentFileName, ...parameters);
