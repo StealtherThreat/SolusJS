@@ -80,7 +80,7 @@ class $_$ {
       let fileName = funcAddr[1];
       if (this.importedFunctions[fileName] != undefined && this.importedFunctions[fileName][functionName] != undefined) {
           return await this.importedFunctions[fileName][functionName](...parameters);
-      } else {
+      } else if (functionName != 'onload' && functionName != 'ondestroy' && functionName != 'onloadstale') {
           console.warn(functionName + ' from ' + fileName + ' is not registered.');
       }
   }
