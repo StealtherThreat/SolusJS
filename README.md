@@ -157,13 +157,13 @@ await $_$.('module_name', false)
 ```
 If we want module to be reloaded again when above called, set #arg2 as true.
 
-So, if modules is to loaded at the starting point, call it like below from main javascript file
+So, if modules is to be loaded at the starting point, call it like below from main javascript file
 ```
 async function onInit() {
     await $_$.LOAD('hello');
 }
 ```
-and then from your html like below 
+and then from your html like below. It will add the contents of your module html placed inside the div when page is loaded.
 ```
 <body onload="onInit();">
     <div id="hello"></div>
