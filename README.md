@@ -11,7 +11,7 @@ https://cdn.jsdelivr.net/gh/StealtherThreat/SolusJS@1.0.4/dist/Solus.min.js
 ## Getting Started
 
 ### Directory Structure
-Although you can create your structure in any way you want keeping in mind the modules directory is in the root folder, it is still recommended to create your project as below.
+Although you can create your structure in any way you want keeping in mind the modules directory is in root, it is still recommended to create your project as below.
 ```
 you_web_application/
 ├── css
@@ -98,10 +98,8 @@ All the modules needs to be present inside modules directory. To create a new mo
 │       |── hello.js
 |       └── hello.html
 ```
-The javascript file of module can have 3 default functions and are called when -
-onload - module is loaded.
-onloadstale - trying to load module again when it is already loaded.
-ondestroy - module is destroying.
+The javascript file of module can have 3 default functions - onload, onloadstale and ondestroy.
+```
 
 ```
 export function sayHello() {
@@ -112,15 +110,15 @@ export function sayHello() {
 }
 
 export async function onload() {
-
+    // called when module is loaded.
 }
 
 export async function onloadstale() {
-
+    // called when trying to load module again when it is already loaded.
 }
 
 export async function ondestroy() {
-    
+    // called when module is destroying.
 }
 ```
 The functions present inside multiple modules can have same names. The uniqueness is only required at module level. 
