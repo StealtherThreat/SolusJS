@@ -163,7 +163,7 @@ async function onInit() {
     await $_$.LOAD('hello');
 }
 ```
-and then from your html like below. It will add the contents of your module html placed inside the div when page is loaded.
+and then from your html like below. It will add the contents of your module's html inside the div when page is loaded.
 ```
 <body onload="onInit();">
     <div id="hello"></div>
