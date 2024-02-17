@@ -99,7 +99,6 @@ All the modules needs to be present inside modules directory. To create a new mo
 |       └── hello.html
 ```
 The javascript file of module can have 3 default functions - onload, onloadstale and ondestroy.
-```
 
 ```
 export function sayHello() {
